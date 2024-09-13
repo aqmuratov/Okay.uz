@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="p-5 mb-4 rounded-3" >
+  <div class="container-fluid py-5" style="padding: 100px; background-color: rgba(255, 255, 255, 0.911);">
+      <h1 class="display-5 fw-bold" style="text-decoration-color: aliceblue;">{{ movie.name }}</h1>
+      <div style="display: flex; background-color: 
+rgba(255, 255, 255, 0.911)">
+      </a><img src="{{movie.image.url}}" alt="{{movie.name}}" style="width: 410px; height: 500px; border-radius: 3%;">
+    <p class="col-md-8 fs-5" style="width: 500px; margin-left: 70px; margin-top: 50px;">{{movie.description|slice:":500"}}...</p>
+  </div >
+    <div style="display: flex; margin-top: 20px;">
+      
+<p style="margin-left: 1100px; margin-top: -60px;"> {{movie.realised_date}}</p>
+<a href="{{movie.trailer}}"><button type="button" style="margin-left: -1190px; width: 410px; height: 50px; background-color: rgba(17, 0, 255, 0.512);" class="btn">Смотреть</button></a>
+<iframe width="600" height="400" style="margin-left: -1200px; margin-top: 100px;" src="https://www.youtube.com/embed/{{ movie.trailer }}" frameborder="0" allowfullscreen></iframe>
+</div>
+  </div>
+</div>
+
+{% endblock %}

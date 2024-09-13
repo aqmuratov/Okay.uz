@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3" style="width: 1340px; margin-left: 90px; border-radius: 0%; height: 500px;">
+        <div class="container-fluid py-5" style="border-radius: 0%;">
+          
+        
+    <div class="box" style="margin-left: 460px; margin-top: -50px; ">
+        <div class="row">
+            <div class="col-lg-4 col-lg-push-4">
+                <h2 class="text-header mt-0 mb-3 text-center">Вход</h2>
+                <form>
+                    <div class="form-group field-loginform-username required">
+                        <input name="username" type="text" class="form-control" placeholder="Почта *" value="">
+                        <p class="help-block help-block-error text-danger"></p>
+                    </div>
+                    <div class="form-group field-loginform-password required">
+                        <input name="password" type="password" class="form-control" placeholder="Пароль *" value="">
+                        <p class="help-block help-block-error text-danger">
+
+                        </p>
+                    </div>
+                    <div class="form-group field-loginform-rememberme text-center">
+                        <label class="custom-control custom-radio">
+                            <input type="checkbox" id="loginform-rememberme" class="custom-control-input" name="rememberMe" value="1">
+                            <span class="custom-control-indicator">
+
+                            </span>
+                            <span class="custom-control-description"> Запомни меня </span>
+                        </label>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" style="padding: 10px 20px; margin-top: 13px;">Вход</button>
+                    </div>
+                </form>
+
+            </ul>
+        </div>
+        <div class="w-100 text-center text-description mt-20" style="margin-top: 17px; margin-left: -260px;">У вас нету аккаунта?  
+            <a class="text-success" href="{% url 'register' %}"> 
+                <b> Регистрация </b> 
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
+{% endblock %}
+

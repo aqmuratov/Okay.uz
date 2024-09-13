@@ -1,0 +1,59 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style= "background-image: url('{% static 'img/uzmobile.jpg' %}');">
+  
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3" style="width: 1200px; margin-left: 160px; border-radius: 0%; margin-top: 200px;">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="{% static 'img/1.jpg' %}" style="width: 500px; height: 400px;" class="d-block w-100" alt="{{i.name.url}}">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{% static 'img/2.jpg' %}" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'img/3.jpg' %}" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'img/4.jpg' %}" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'img/5.jpg' %}" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'img/6.jpg' %}" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'img/7.jpg' %}" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                
+        </div>
+        <a ><h1 style="margin-top: 15px;"> Фильмы </h1></a>
+        {% for i in movies %}
+        <p style="margin-top: 100px;">{{ i.image.url }}</p>
+        {% endfor %}
+      </div>
+      
+</body>
+</html>
+
+{% endblock %}
